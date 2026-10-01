@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: '3.11'
 
@@ -27,7 +27,7 @@ jobs:
         # zizmor: ignore[use-trusted-publishing] -- publishes with a PyPI API
         # token by design; migrating to OIDC trusted publishing is tracked
         # separately.
-        uses: pypa/gh-action-pypi-publish@cef221092ed1bacb1cc03d23a2d87d1d172e277b # release/v1
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # release/v1
         with:
           verbose: true
           password: ${{ secrets.PYPI_API_TOKEN }}
